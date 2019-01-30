@@ -43,10 +43,25 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Task 2
 
-let navigation = document.querySelectorAll('a');
+//header
+const navigation = document.querySelectorAll('a');
 for (let i = 0; i < navigation.length; i++) {
     navigation[i].textContent = siteContent["nav"][`nav-item-${i + 1}`]; 
-    navigation[i].style.color = 'green';
 }
   
+//cta
+const h1 = document.querySelector('h1');
+h1.textContent = siteContent["cta"]["h1"]; 
+h1.style.fontSize = ''
 
+const button = document.querySelector('button');
+button.textContent = siteContent["cta"]["button"]; 
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+//main-content
+const multipleH = document.querySelectorAll('h4');
+multipleH[0].textContent = siteContent["main-content"]["features-h4"]; 
+multipleH[1].textContent = siteContent["main-content"]["about-h4"]; 
